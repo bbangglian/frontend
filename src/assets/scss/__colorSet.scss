@@ -1,0 +1,90 @@
+
+/* System Light Theme */
+@media (prefers-color-scheme: light) {
+	:root{
+		--primary-100: #ecf5ff;
+
+		--text-title: var(--gray-900);
+		--text-body: var(--gray-800);
+		--text-detail: var(--gray-600);
+		--text-white: #f8f9fc;
+		--text-black: #101828;
+
+		--text-primary: #101828;
+		--text-secondary: #344054;
+		--text-tertiary: #667085; 
+		--text-disable: #a9b1c0;
+		--text-placeholder: #818da2;
+		--text-brand: #005df9; 
+		--text-decrease: #2a7aff;
+		--text-increase: #ff3247;
+		--text-success:#005df9;
+		--text-negative:#e5051c;
+	}
+}
+
+.theme-light{
+    --primary-100: #ecf5ff;
+
+    --text-title: var(--gray-900);
+    --text-body: var(--gray-800);
+    --text-detail: var(--gray-600);
+    --text-white: #f8f9fc;
+    --text-black: #101828;
+
+    --text-primary: #101828;
+    --text-secondary: #344054;
+    --text-tertiary: #667085; 
+    --text-disable: #a9b1c0;
+    --text-placeholder: #818da2;
+    --text-brand: #005df9; 
+    --text-decrease: #2a7aff;
+    --text-increase: #ff3247;
+    --text-success:#005df9;
+    --text-negative:#e5051c;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root{
+		--primary-100: #ecf5ff;
+
+		--text-title: var(--gray-900);
+		--text-body: var(--gray-800);
+		--text-detail: var(--gray-600);
+		--text-white: #f8f9fc;
+		--text-black: #101828;
+
+		--text-primary: #101828;
+		--text-secondary: #344054;
+		--text-tertiary: #667085; 
+		--text-disable: #a9b1c0;
+		--text-placeholder: #818da2;
+		--text-brand: #005df9; 
+		--text-decrease: #2a7aff;
+		--text-increase: #ff3247;
+		--text-success:#005df9;
+		--text-negative:#e5051c;
+    }
+}
+
+.theme-dark{
+    --primary-100: #ecf5ff;
+
+    --text-title: var(--gray-900);
+    --text-body: var(--gray-800);
+    --text-detail: var(--gray-600);
+    --text-white: #f8f9fc;
+    --text-black: #101828;
+
+    --text-primary: #101828;
+    --text-secondary: #344054;
+    --text-tertiary: #667085; 
+    --text-disable: #a9b1c0;
+    --text-placeholder: #818da2;
+    --text-brand: #005df9; 
+    --text-decrease: #2a7aff;
+    --text-increase: #ff3247;
+    --text-success:#005df9;
+    --text-negative:#e5051c;
+}

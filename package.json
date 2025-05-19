@@ -1,0 +1,55 @@
+{
+  "name": "solfx_vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "core-js": "^3.42.0",
+    "grid-layout-plus": "^1.0.6",
+    "iconv-lite": "^0.6.3",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "pinia": "^3.0.2",
+    "safer-buffer": "^2.1.2",
+    "vite-plugin-singlefile": "^2.2.0",
+    "vue": "^3.5.13",
+    "vue-lodash": "^2.1.2",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "eslint": "^9.25.1",
+    "eslint-plugin-vue": "^10.0.1",
+    "vite": "^6.2.4",
+    "vite-plugin-node-polyfills": "^0.23.0",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es2021": true,
+      "browser": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

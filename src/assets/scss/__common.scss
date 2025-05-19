@@ -1,0 +1,169 @@
+/* display style */
+@mixin flex-center-row {
+    display: flex;
+    justify-content: center;
+    @content;
+}
+
+@mixin flex-center-col {
+    display: flex;
+    align-items: center;
+    @content;
+}
+
+@mixin flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    @content;
+}
+
+/* font style */
+@mixin font($size, $weight: 400, $line-height: 100%, $letter-spacing: -0.02em, $color: var(--color-high-em)) {
+    font-weight: $weight;
+    font-size: $size;
+    @if $line-height != null {
+        line-height: $line-height;
+    }
+    letter-spacing: $letter-spacing;
+    color: $color;
+    @content;
+}
+
+/* radio style */
+@mixin setRadioBtn(
+    $width, $height, 
+    // $defaultC: var(--color-med-em), $pointC: var(--color-high-em)
+    ) {
+    @include flex-center-col;
+    input[type="radio"] {
+        appearance: none;
+        top: 0;
+        padding: 0;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px; 
+        border: none;
+        // background-image: url("/wts/img/radio-unchecked.svg");     
+        cursor: pointer;             
+    }
+
+    input[type="radio"]:checked {
+        // background-image: url("/wts/img/radio-checked.svg");
+    }
+
+    label {
+        margin-right: 30px; 
+        cursor: pointer;
+        color: $defaultC;
+
+        &.answer {color: $pointC;}
+    }
+}
+
+/* button style */
+@mixin base-btn($width, $height, $border, $border-radius, $background) {
+    @include flex-center-all;
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $border-radius;
+    background: $background;
+    @content;
+
+    &:disabled {opacity: 0.3; cursor: not-allowed}
+}
+
+@mixin fill-btn($width, $height, $radius, $background) {
+    @include base-btn($width, $height, 0, $radius, $background);
+}
+
+@mixin border-btn($width, $height, $border, $radius) {
+    @include base-btn($width, $height, $border, $radius, var(--color-bg-white));
+}
+
+/* img style */
+@mixin fill-img ($width, $height, $icon-width, $icon-height, $icon-url:null) {
+    width: $width;
+    height: $height;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url($icon-url);
+    background-size: $icon-width $icon-height;
+}
+
+/* before 에 이미지 넣기(예를들면 체크) */
+@mixin icon-before($width, $height, $bg-img, $bg-size, $margin-right: 0) {
+    position: relative;
+    @include flex-center-col();
+
+    &::before{
+        content: "";
+        width: $width;
+        height: $height;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url($bg-img);
+        background-size: $bg-size;
+        margin-right: $margin-right; 
+    }
+}
+
+
+/* 
+*  list style - 동그라미
+*/
+.list-desc {
+    > li {
+        position: relative;
+        padding: 4px 8px 4px 14px;
+        
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+
+            position: absolute;
+            top: 1em;
+            left: 0;
+            background-color: #7e7e7e;
+        }
+    }
+}
+
+/* 
+*  list style - 하이픈
+*/
+.list-hyphen {
+    > li {
+        position: relative;
+        padding: 4px 8px 4px 14px;
+        
+        &::before {
+            content: "-";
+            position: absolute;
+            top: 0.3em;
+            left: 0;
+        }
+    }
+}
+
+/* 
+*  list style - 앞에 특수문자 없음
+*/
+.list-default {
+    > li { padding: 4px 8px 4px 0; }
+}

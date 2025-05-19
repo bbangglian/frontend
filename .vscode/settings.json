@@ -1,0 +1,38 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig"
+  },
+  "liveSassCompile.settings.compileOnWatch": false,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.useNewCompiler": true,
+  "liveSassCompile.settings.showOutputWindowOn": "Warning",
+  "liveSassCompile.settings.formats": [
+      {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/src/assets/css",
+      "savePathReplacementPairs": null
+      },
+      {
+      "format": "compressed",
+      "extensionName": "-min.css",
+      "savePath": "/src/assets/css",
+      "savePathReplacementPairs": null,
+      "generateMap": false
+      }
+  ],
+  "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**",
+  ],
+  "liveSassCompile.settings.includeItems": [
+      "/src/assets/scss/style.scss",
+  ],
+  "liveSassCompile.settings.partialsList": [
+      "/**/_*.s[ac]ss"    // 모든 폴더의_로 시작하는 scss파일
+  ],
+
+}
